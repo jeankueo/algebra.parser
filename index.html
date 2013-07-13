@@ -1,0 +1,36 @@
+<html>
+	<head>
+		<script src="jquery-1.9.0.min.js"></script>
+		<script src="parser.js"></script>
+	</head>
+	<body>
+		<table id='inputForm' border="1">
+		<tr>
+			<td><b><label for="tokens">Value:</label></b></td>
+			<td><input type="text" id='inputValue' onInput='testParsing()'/>
+				<input type="submit" id='generate' value='Generate Input Form' onClick='generate()'/>
+			</td>
+		</tr>
+		<tr>
+			<td><b><label for="tokens">Tokens:</label></b></td>
+			<td><p id='tokens'/></td>
+		</tr>
+		<tr>
+			<td><b><label for="error">Errors:</label></b></td>
+			<td><p id='error' style="color:red"/></td>
+		</tr>
+		</table>
+		
+		<br/>
+		
+		<table id='columnList' border="1" hidden="hidden"></table>
+		
+	<p>
+	Steps of testing:<br/>
+1. Input an expression in 'Value"'. For example: $a$/$b$<br/>
+2. Click Generate Input Form. You will see a form appear below, all varibles are listed.<br/>
+3. Input values (number) of variables<br/>
+4. Click Calculate.
+	</p>
+	</body>
+</html>
